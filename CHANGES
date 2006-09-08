@@ -1,4 +1,13 @@
-=========== Version 2.8.1
+=========== Version 2.9.1
+	- Fixed a bug in new_rack_pbsmon.py. Counting of serial
+	  nodes was wrong and state down has topmost priority
+
+=========== Version 2.9.0
+	- Added support for new torque build system 2.1.0
+	- Added new_rack_pbsmon.py
+	  Authors: Walter de Jong & Bas van der Vlies
+
+=========== Version 2.8.2
 
 Configure has a new option:
 	--with-pbsdir=PATH
@@ -9,12 +18,13 @@ some useful defaults to find the libaries.
 Suggested by: Troy Baer
 
 PBSQuery.py:
-	- If we can not make an connection with the server
-	  the raise an exception.
+	- If we can not make a connection with the server
+	  then raise an exception and let the programmer 
+	  decides what to do.
 
 pbs_python.spec:
-	-  It can now handle mode bits
-	Author: Martin Pels from SARA
+	- It can now handle mode bits
+	  Author: Martin Pels from SARA
         
 =========== Version 2.8.0
 
