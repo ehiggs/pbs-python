@@ -67,7 +67,7 @@ if __name__ == '__main__':
 
         os.symlink('C++/pbs.py', 'src/pbs.py')
 
-    elif LooseVersion(VERSION) >= LooseVersion('2.4'):
+    elif LooseVersion(PBS_VERSION) >= LooseVersion('2.4'):
 
         TORQUE_VERSION='TORQUE_2'
         SOURCE_FILE='src/C/pbs_wrap.c'
