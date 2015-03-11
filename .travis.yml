@@ -1,0 +1,10 @@
+language: python
+python:
+    - "2.6"
+    - "2.7"
+before_install:
+    - sudo apt-get update && sudo apt-get install -y python-dev libtorque2-dev
+install:
+    - pip install tox
+script:
+    - tox -e py${TRAVIS_PYTHON_VERSION}

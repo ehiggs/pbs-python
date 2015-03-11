@@ -1,1 +1,2 @@
 include src/C++/*.h
+include src/C/*.h

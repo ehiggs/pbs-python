@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/ehiggs/pbs-python.svg)](https://travis-ci.org/ehiggs/pbs-python)
+
 the latest stable pbs_python interface is available from:
     ftp://ftp.surfsara.nl/pub/outgoing/pbs_python.tar.gz
 
