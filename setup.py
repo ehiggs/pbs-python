@@ -49,18 +49,6 @@ if __name__ == '__main__':
         pass
 
     if LooseVersion(PBS_VERSION) >= LooseVersion('4.2'):
-
-        #inc=os.environ.get('PBS_PYTHON_INCLUDEDIR','/usr/include/torque')
-        #os.environ['CC']='g++'
-        #os.environ['CFLAGS']=' '.join(os.environ.get('CFLAGS','').split(' ')+['-I%s'%inc]) 
-        
-        #if not os.path.exists(os.path.join(inc,'log.h')):
-        #    print 'Failed to find log.h in include dir %s. (Set include dir via PBS_PYTHON_INCLUDEDIR variable)'%inc
-        #    sys.exit(2)
-      
-        #for fn in glob.glob('*.h'):
-        #    os.remove(fn)
-         
         TORQUE_VERSION='TORQUE_4'
         SOURCE_FILE='src/C++/pbs_wrap.cxx'
         PBS_PYTHON_INCLUDE_DIR = 'src/C++'
@@ -68,10 +56,11 @@ if __name__ == '__main__':
         os.symlink('C++/pbs.py', 'src/pbs.py')
 
     elif LooseVersion(PBS_VERSION) >= LooseVersion('2.4'):
-
         TORQUE_VERSION='TORQUE_2'
         SOURCE_FILE='src/C/pbs_wrap.c'
         PBS_PYTHON_INCLUDE_DIR = 'src/C'
+        # Older pbs-config yielded some link line info instead of just the libraries
+        PBS_LIBS = 'torque'
 
         os.symlink('C/pbs.py', 'src/pbs.py')
 
