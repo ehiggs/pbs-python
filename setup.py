@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
         extra_path = 'pbs',
             package_dir = { '' : SOURCE_DIR }, 
-            py_modules = [ 'pbs',  'PBSQuery'], 
+            py_modules = [ 'pbs',  'PBSQuery', '__init__'], 
 
         ext_modules = [ 
             Extension( '_pbs', [SOURCE_FILE],
